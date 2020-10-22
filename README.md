@@ -8,6 +8,11 @@ qtree -redo -m MFP -s Peromyscus_Mitochondria_msa.fa
 
 ## Reconstructing P. polionotus cds
 
+#### Retrieving raw data
+```
+python 
+```
+
 #### Obtaining reference CDS file
 ```
 wget https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/500/345/GCF_000500345.1_Pman_1.0/GCF_000500345.1_Pman_1.0_cds_from_genomic.fna.gz
