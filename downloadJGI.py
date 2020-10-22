@@ -1,4 +1,9 @@
 import os
+
+os.system('curl 'https://signon.jgi.doe.gov/signon/create' --data-urlencode 'login=lgozasht@ucsc.edu' --data-urlencode 'password=Landen1044' -c cookies > /dev/null')
+os.system('curl 'https://genome.jgi.doe.gov/portal/ext-api/downloads/get-directory?organism=PerpolsubgrisePO_FD' -b cookies > files.xml')
+
+
 with open('files.xml','r') as f:
     next(f)
     next(f)
