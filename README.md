@@ -10,7 +10,12 @@ qtree -redo -m MFP -s Peromyscus_Mitochondria_msa.fa
 
 #### Retrieving raw data
 ```
-python 
+python downloadJGI.py
+```
+
+#### Converting sff to fastq
+```
+python convertsff.py
 ```
 
 #### Obtaining reference CDS file
