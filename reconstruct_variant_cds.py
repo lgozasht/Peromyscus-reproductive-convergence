@@ -1,4 +1,5 @@
 from Bio import SeqIO
+import os
 
 cdsDic = {}
 indexDic = {}
@@ -25,14 +26,14 @@ for fasta in fasta_sequences:
     refDic[header.split(' ')[0]] = sequence
 
 count = 0
+os.system('rm -r stats_tmp.tsv')
 for c in refDic:
     if c in cdsDic:
         count += 1
-        with open('stats.tsv','a') as f:
+        with open('stats_tmp.tsv','a') as f:
 
-             f.write('\t{0}\t{1}\t{2}\n'.format(c,len(cdsDic[c]),len(refDic[c])))
-
-print(count, len(refDic)) 
+             f.write('{0}\t{1}\t{2}\t{3}\n'.format(c,len(cdsDic[c]),len(refDic[c]),float(len(cdsDic[c]))/float(len(refDic[c]))))
+os.system("sort -t $'\t' -k4 -n stats_tmp.tsv > summary_stats.tsv")
 
 with open('reconstructed_CDS.fa','w') as f:
     for c in cdsDic:
@@ -43,7 +44,7 @@ with open('reconstructed_CDS.fa','w') as f:
                 sequence = sequence + cdsDic[c][k]
                 k += 1
             else:
-                sequence = sequence + refDic[c][k]
+                sequence = sequence + refDic[c][i]
                 k = 0
-        print(len(refDic[c]), len(sequence))
+        
         f.write('>{0}\n{1}\n'.format(c,sequence))
