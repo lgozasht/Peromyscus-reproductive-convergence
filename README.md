@@ -52,3 +52,8 @@ samtools mpileup -uf temp/GCF_000500345.1_Pman_1.0_cds_from_genomic.fna *.bam > 
 ```
 bcftools call -m variants/raw_calls_P_polionotus.bcf > variants/calls_P_polionotus.vcf
 ```
+
+#### Constructing variant aware transcripts
+```
+python reconstruct_variant_cds.py
+```
