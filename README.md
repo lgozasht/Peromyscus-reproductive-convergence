@@ -3,7 +3,7 @@
 ## Phylogenetic inference
 ```
 mafft mitochondrial_genomes.fa > mitochondrial_genomes_msa.fa
-qtree -redo -m MFP -s Peromyscus_Mitochondria_msa.fa 
+iqtree -redo -m MFP -s Peromyscus_Mitochondria_msa.fa 
 ```
 
 ## Reconstructing P. polionotus cds
