@@ -45,7 +45,9 @@ samtools sort aln.bam > aln.sorted.bam
 
 #### Pileup
 ```
+mkdir temp
 ln -rs GCF_000500345.1_Pman_1.0_cds_from_genomic.fna temp/GCF_000500345.1_Pman_1.0_cds_from_genomic.fna
+mkdir variants
 samtools mpileup -uf temp/GCF_000500345.1_Pman_1.0_cds_from_genomic.fna *.bam > variants/raw_calls_P_polionotus.bcf
 ```
 #### Variant calls
