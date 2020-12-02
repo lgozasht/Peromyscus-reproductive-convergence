@@ -63,12 +63,15 @@ python reconstruct_variant_cds.py
 ## Finding homologous transcripts between species
 
 #### findOverlaps
-Requires silexx and blastn as dependencies
+Requires silexx (see https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-116) and blastn (see https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download) as dependencies.
 
-Performs an allvall blast between transcripts in each species and clusters sequences with > 80% ID and > 80% alignment block.
+
+Performs an all vs all blast between transcripts in each species and clusters sequences with > 80% identity and > 80% alignment block.
 
 ```
 python findOverlaps.py
 ```
+
+## Making PAML input data
 
 
