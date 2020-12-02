@@ -70,13 +70,30 @@ python reconstruct_variant_cds.py
 #### findOverlaps
 Requires silexx (see https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-12-116) and blastn (see https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download) as dependencies.
 
-
 Performs an all vs all blast between transcripts in each species and clusters sequences with > 80% identity and > 80% alignment block.
 
+##### Usage
+First, open findOverlaps.py, scroll to the bottom of the script, and uncomment the blast function call. Then, run the command,
 ```
 python findOverlaps.py
 ```
+You should now have files for each pairwise comparison containing overlaps between homologous transcripts. You'll want to combine all overlaps into one file using the command,
+```
+cat file1 file2 file3 fileN > all_hits.out
+```
 
-## Making PAML input data
+Then, go back in the script, comment out the blast function call, and uncomment the other two function calls. Run the command,
+```
+python findOverlaps.py
+```
+and you should now have a directory callded "selection_analysis" that harbors directories for each cluster containing its respective codeml input data. 
 
 
+## Making codeml input data
+
+#### makePAMLinput
+PAML's codeml requires a multiple sequence alignment corresponding phylogeny as input. However, the functionality and accuracy of codeml is impaired by indels and missing data. Thus, after producing an msa and tree for each transcript using MAFFT and IQ-Tree respectively, I cleaned my alignments using a modified version of Alignment_Refiner_v2 (see https://github.com/dportik/Alignment_Refiner) which also requires trimmal as a dependency (see http://trimal.cgenomics.org/).
+
+```
+python makePAMLinput.py
+```
