@@ -1,12 +1,15 @@
 # Peromyscus-reproductive-convergence
+I developed a pipeline for detecting shared signatures of selection between two monogomous Peromyscus species, P. eremecus and P. polionotus, relatice two their respective polygamous sister species, P. maniculatus and P. leucopus.
 
 ## Phylogenetic inference
+I used MAFFT (see https://mafft.cbrc.jp/alignment/software/) to generate a multiple sequence alignment from the mitochondrial genomes of P. eremecus, P. polionotus, P. maniculatus and P. leucopus with the addition of P. crinitus for comparison and Mus musculus and Rattus norvegicus as outgroups. I used IQ-TREE (see http://www.iqtree.org/) to infer the phylogeny thereafter.
+
 ```
 mafft mitochondrial_genomes.fa > mitochondrial_genomes_msa.fa
 iqtree -redo -m MFP -s Peromyscus_Mitochondria_msa.fa 
 ```
 
-## Reconstructing P. polionotus cds
+## Example scripts used for obtaining sequence data fro JGI
 
 #### Retrieving raw data
 ```
@@ -17,6 +20,8 @@ python downloadJGI.py
 ```
 python convertsff.py
 ```
+
+## Example pipeline for reconstructing a variant aware cds 
 
 #### Obtaining reference CDS file
 ```
