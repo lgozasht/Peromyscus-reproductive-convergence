@@ -72,7 +72,6 @@ Requires silexx (see https://bmcbioinformatics.biomedcentral.com/articles/10.118
 
 Performs an all vs all blast between transcripts in each species and clusters sequences with > 80% identity and > 80% alignment block.
 
-##### Usage
 First, open findOverlaps.py, scroll to the bottom of the script, and uncomment the blast function call. Then, run the command,
 ```
 python findOverlaps.py
