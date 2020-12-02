@@ -9,7 +9,7 @@ mafft mitochondrial_genomes.fa > mitochondrial_genomes_msa.fa
 iqtree -redo -m MFP -s Peromyscus_Mitochondria_msa.fa 
 ```
 
-## Example scripts used for obtaining sequence data fro JGI
+## Example scripts used for obtaining sequence data from JGI
 
 #### Retrieving raw data
 ```
