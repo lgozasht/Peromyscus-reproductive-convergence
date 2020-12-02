@@ -59,3 +59,14 @@ bcftools call -m variants/raw_calls_P_polionotus.bcf > variants/calls_P_polionot
 ```
 python reconstruct_variant_cds.py
 ```
+
+## Finding homologous transcripts between species
+
+#### findOverlaps
+Requires silexx and blastn as dependencies
+
+Performs an allvall blast between transcripts in each species and clusters sequences with > 80% ID and > 80% alignment block.
+
+```
+python findOverlaps.py
+```
