@@ -88,7 +88,7 @@ python findOverlaps.py
 and you should now have a directory callded "selection_analysis" that harbors directories for each cluster containing its respective codeml input data. 
 
 
-## Making codeml input data
+## Making codeml input data and running codeml
 
 #### makePAMLinput
 PAML's codeml requires a multiple sequence alignment corresponding phylogeny as input. However, the functionality and accuracy of codeml is impaired by indels and missing data. Thus, after producing an msa and tree for each transcript using MAFFT and IQ-Tree respectively, I cleaned my alignments using a modified version of Alignment_Refiner_v2 (see https://github.com/dportik/Alignment_Refiner) which also requires trimmal as a dependency (see http://trimal.cgenomics.org/).
