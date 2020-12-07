@@ -112,7 +112,7 @@ python makeModel2Files.py
 ```
 
 #### runPAML
-Runs PAML's codeml. To specify which model to use, open the file and edit the "paml_control_model", which can be either "paml_control_model0" or "paml_control_model2"
+Runs PAML's codeml. To specify which model to use, open the file and edit the "paml_control_model", which can be either "paml_control_model0" or "paml_control_model2". Both control files are available in this repository.
 
 ```
 python runPAML.py
