@@ -96,3 +96,26 @@ PAML's codeml requires a multiple sequence alignment corresponding phylogeny as 
 ```
 python makePAMLinput.py
 ```
+
+#### correctPhylip
+Ensures compatability of phylip format with PAML
+
+```
+python correctPhylip.py
+```
+
+#### makeModel2Files
+Adds annotations to phylip and tree input files for compatability with PAML model=2 
+
+```
+python makeModel2Files.py
+```
+
+#### runPAML
+Runs PAML's codeml. To specify which model to use, open the file and edit the "paml_control_model", which can be either "paml_control_model0" or "paml_control_model2"
+
+```
+python runPAML.py
+```
+
+
