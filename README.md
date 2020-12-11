@@ -1,4 +1,4 @@
-# Peromyscus-reproductive-convergence
+# Peromyscus-reproductive-genetic-differences
 I developed a pipeline for detecting shared signatures of selection between two monogomous Peromyscus species, P. eremecus and P. polionotus, relatice two their respective polygamous sister species, P. maniculatus and P. leucopus.
 
 ## Phylogenetic inference
