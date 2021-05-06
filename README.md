@@ -118,4 +118,5 @@ Runs PAML's codeml. To specify which model to use, open the file and edit the "p
 python runPAML.py
 ```
 
-
+## Reference
+* Landen Gozashti, Russell Corbett-Detig and Scott W. Roy "Evolutionary rates of testes-expressed genes differ in monogamous and promiscuous Peromyscus species", bioRxiv [pre-print](https://www.biorxiv.org/content/10.1101/2021.04.21.440792v7) 2021.
