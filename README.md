@@ -61,6 +61,8 @@ bcftools call -m variants/raw_calls_P_polionotus.bcf > variants/calls_P_polionot
 ```
 
 #### Constructing variant aware transcripts
+Reconstructs cds and replaces the reference allele at heterozygous sites where the alternate allele exhibits a higher frequency.
+
 ```
 python reconstruct_variant_cds.py
 ```
