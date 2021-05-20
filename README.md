@@ -5,8 +5,8 @@ I developed a pipeline for detecting shared signatures of selection between two 
 I used MAFFT (see https://mafft.cbrc.jp/alignment/software/) to generate a multiple sequence alignment from 15 concatenated orthologous genes of P. eremecus, P. polionotus, P. maniculatus and P. leucopus with the addition of Mus musculus and Rattus norvegicus as outgroups. I used IQ-TREE (see http://www.iqtree.org/) to infer the phylogeny thereafter.
 
 ```
-mafft mitochondrial_genomes.fa > mitochondrial_genomes_msa.fa
-iqtree -redo -m MFP -s Peromyscus_Mitochondria_msa.fa 
+mafft concatenated__genes.fa > concatenated__genes_msa.fa
+iqtree -redo -m MFP -s concatenated__genes_msa.f
 ```
 
 ## Example scripts used for obtaining sequence data from JGI
