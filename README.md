@@ -2,7 +2,7 @@
 I developed a pipeline for detecting shared signatures of selection between two monogomous Peromyscus species, P. eremecus and P. polionotus, relatice two their respective polygamous sister species, P. maniculatus and P. leucopus.
 
 ## Phylogenetic inference
-I used MAFFT (see https://mafft.cbrc.jp/alignment/software/) to generate a multiple sequence alignment from the mitochondrial genomes of P. eremecus, P. polionotus, P. maniculatus and P. leucopus with the addition of P. crinitus for comparison and Mus musculus and Rattus norvegicus as outgroups. I used IQ-TREE (see http://www.iqtree.org/) to infer the phylogeny thereafter.
+I used MAFFT (see https://mafft.cbrc.jp/alignment/software/) to generate a multiple sequence alignment from 15 concatenated orthologous genes of P. eremecus, P. polionotus, P. maniculatus and P. leucopus with the addition of Mus musculus and Rattus norvegicus as outgroups. I used IQ-TREE (see http://www.iqtree.org/) to infer the phylogeny thereafter.
 
 ```
 mafft mitochondrial_genomes.fa > mitochondrial_genomes_msa.fa
